@@ -26288,6 +26288,11 @@
 	        'h3',
 	        null,
 	        ' Examples Component '
+	      ),
+	      React.createElement(
+	        'p',
+	        null,
+	        'Welcome to examples page!'
 	      )
 	    );
 	  }
