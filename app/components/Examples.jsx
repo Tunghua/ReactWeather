@@ -5,8 +5,8 @@ var Examples = React.createClass({
   render: function () {
     return (
       <div>
-        <h1 className="text-center"> Examples </h1>
-        <p>Here are some example locations to try out:</p>
+        <h1 className="text-center"> 搜尋範例 </h1>
+        <p>試試以下城市:</p>
         <ol>
           <li>
             <Link to='/?location=taipei'>Taipei, Taiwan</Link>

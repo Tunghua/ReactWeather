@@ -24912,7 +24912,7 @@
 	          React.createElement(
 	            'li',
 	            { className: 'menu-text' },
-	            'React Menu App'
+	            '氣溫搜尋器'
 	          ),
 	          React.createElement(
 	            'li',
@@ -24920,7 +24920,7 @@
 	            React.createElement(
 	              IndexLink,
 	              { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	              'Get Weather'
+	              '查詢氣溫'
 	            )
 	          ),
 	          React.createElement(
@@ -24929,7 +24929,7 @@
 	            React.createElement(
 	              Link,
 	              { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	              'About'
+	              '關於'
 	            )
 	          ),
 	          React.createElement(
@@ -24938,7 +24938,7 @@
 	            React.createElement(
 	              Link,
 	              { to: '/examples', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	              'Examples'
+	              '範例'
 	            )
 	          )
 	        )
@@ -26400,12 +26400,12 @@
 	      React.createElement(
 	        'h1',
 	        { className: 'text-center' },
-	        ' Examples '
+	        ' 搜尋範例 '
 	      ),
 	      React.createElement(
 	        'p',
 	        null,
-	        'Here are some example locations to try out:'
+	        '試試以下城市:'
 	      ),
 	      React.createElement(
 	        'ol',
