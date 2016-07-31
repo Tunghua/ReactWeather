@@ -26359,18 +26359,76 @@
 /* 248 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var About = React.createClass({
-	  displayName: 'About',
+	  displayName: "About",
 
 	  render: function render() {
 	    return React.createElement(
-	      'h3',
+	      "div",
 	      null,
-	      ' About Component '
+	      React.createElement(
+	        "h1",
+	        { className: "text-center" },
+	        " 關於 "
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "這是個氣象查詢測試專案"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "使用的工具為："
+	      ),
+	      React.createElement(
+	        "ul",
+	        null,
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "https://facebook.github.io/react" },
+	            "React"
+	          ),
+	          "-前端框架"
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "http://openweathermap.org" },
+	            "Open Weather Map"
+	          ),
+	          "-氣象查詢 API"
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "http://foundation.zurb.com/" },
+	            "Foundation"
+	          ),
+	          "-前端 css 框架"
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "http://heroku.com/" },
+	            "Heroku"
+	          ),
+	          "-後端主機"
+	        )
+	      )
 	    );
 	  }
 	});
