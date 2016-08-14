@@ -2,6 +2,7 @@ var React = require('react');
 var WeatherMessage = require('WeatherMessage');
 var WeatherForm = require('WeatherForm');
 var openWeatherMap = require('openWeatherMap');
+var ErrorModal = require('ErrorModal');
 
 var Weather = React.createClass({
   getInitialState: function () {
@@ -12,16 +13,21 @@ var Weather = React.createClass({
 
   handleNewMessage: function (aLocation) {
     var that = this;
-    this.setState({isLoading:true});
+    this.setState({
+      isLoading:true,
+      errorMessage: undefined
+    });
     openWeatherMap.getTemp(aLocation).then(function(temp){
       that.setState({
         sLocation: aLocation,
         sTemp: temp,
         isLoading: false
       });
-    },function(errorMessage){
-      that.setState({isLoading:false});
-      alert(errorMessage);
+    },function(e){
+      that.setState({
+        isLoading:false,
+        errorMessage: e.message
+      });
     });
   },
 
@@ -38,11 +44,21 @@ var Weather = React.createClass({
         return <div><h3 className="text-center">請輸入城市英文名稱</h3></div>
       }
     }
+
+    function renderError () {
+      if(typeof errorMessage === 'string') {
+        return (
+          <ErrorModal/>
+        )
+      }
+    }
+
     return (
       <div>
         <h1 className="text-center"> 氣溫查詢器 </h1>
         <WeatherForm onNewMessage={this.handleNewMessage}/>
         {renderMessage()}
+        {renderError()}
       </div>
     );
   }
