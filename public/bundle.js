@@ -25014,20 +25014,30 @@
 	      if (vIsLoading) {
 	        return React.createElement(
 	          'h3',
-	          null,
-	          'fetcing weather...'
+	          { className: 'text-center' },
+	          '存取中...'
 	        );
 	      } else if (vLocation && vTemp) {
 	        return React.createElement(WeatherMessage, { pLocation: vLocation, pTemp: vTemp });
+	      } else {
+	        return React.createElement(
+	          'div',
+	          null,
+	          React.createElement(
+	            'h3',
+	            { className: 'text-center' },
+	            '請輸入城市英文名稱'
+	          )
+	        );
 	      }
 	    }
 	    return React.createElement(
 	      'div',
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        ' Weather Component '
+	        'h1',
+	        { className: 'text-center' },
+	        ' 氣溫查詢器 '
 	      ),
 	      React.createElement(WeatherForm, { onNewMessage: this.handleNewMessage }),
 	      renderMessage()
@@ -25042,7 +25052,7 @@
 /* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
@@ -25062,14 +25072,14 @@
 	  var vLocation = props.pLocation;
 	  var vTemp = props.pTemp;
 	  return React.createElement(
-	    'div',
+	    "div",
 	    null,
 	    React.createElement(
-	      'p',
-	      null,
-	      'The Temperture at ',
+	      "h3",
+	      { className: "text-center" },
+	      " ",
 	      vLocation,
-	      ' is ',
+	      " 現在溫度 ",
 	      vTemp
 	    )
 	  );
@@ -25106,8 +25116,8 @@
 	        React.createElement("input", { type: "text", ref: "location" }),
 	        React.createElement(
 	          "button",
-	          null,
-	          "Get Weather"
+	          { className: "button expanded hollow" },
+	          "查詢"
 	        )
 	      )
 	    );

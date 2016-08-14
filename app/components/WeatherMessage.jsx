@@ -17,7 +17,7 @@ var WeatherMessage = (props) => {
   var vTemp = props.pTemp;
   return(
     <div>
-      <p>The Temperture at {vLocation} is {vTemp}</p>
+      <h3 className="text-center"> {vLocation} 現在溫度 {vTemp}</h3>
     </div>
   );
 }

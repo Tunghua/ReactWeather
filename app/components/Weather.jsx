@@ -31,14 +31,16 @@ var Weather = React.createClass({
     var vIsLoading = this.state.isLoading;
     function renderMessage(){
       if(vIsLoading){
-        return <h3>fetcing weather...</h3>;
+        return <h3 className="text-center">存取中...</h3>;
       }else if(vLocation && vTemp){
         return <WeatherMessage pLocation = {vLocation} pTemp = {vTemp}/>;
+      }else{
+        return <div><h3 className="text-center">請輸入城市英文名稱</h3></div>
       }
     }
     return (
       <div>
-        <h3> Weather Component </h3>
+        <h1 className="text-center"> 氣溫查詢器 </h1>
         <WeatherForm onNewMessage={this.handleNewMessage}/>
         {renderMessage()}
       </div>
